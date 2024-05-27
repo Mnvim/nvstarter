@@ -9,6 +9,11 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+map("t", "<ESC>", function()
+  local win = vim.api.nvim_get_current_win()
+  vim.api.nvim_win_close(win, true)
+end, { desc = "terminal close term in terminal mode" })
+
 -- Split window management
 map("n", "<leader>sv", "<C-w>v")     -- split window vertically
 map("n", "<leader>sh", "<C-w>s")     -- split window horizontally
@@ -20,10 +25,10 @@ map("n", "<leader>sl", "<C-w>>5")    -- make split windows width bigger
 map("n", "<leader>sh", "<C-w><5")    -- make split windows width smaller
 
 -- Tab management
-map("n", "<leader>to", ":tabnew<CR>")   -- open a new tab
-map("n", "<leader>tx", ":tabclose<CR>") -- close a tab
-map("n", "<leader>tn", ":tabn<CR>")     -- next tab
-map("n", "<leader>tp", ":tabp<CR>")     -- previous tab
+-- map("n", "<leader>to", ":tabnew<CR>")   -- open a new tab
+-- map("n", "<leader>tx", ":tabclose<CR>") -- close a tab
+-- map("n", "<leader>tn", ":tabn<CR>")     -- next tab
+-- map("n", "<leader>tp", ":tabp<CR>")     -- previous tab
 
 -- NvimTree
 -- map("n", "<leader>ee", ":NvimTreeToggle<CR>")
@@ -32,12 +37,12 @@ map("n", "<leader>tp", ":tabp<CR>")     -- previous tab
 
 
 -- Telescope
-map('n', '<leader>ff', require('telescope.builtin').find_files, {})
-map('n', '<leader>fg', require('telescope.builtin').live_grep, {})
-map('n', '<leader>fb', require('telescope.builtin').buffers, {})
-map('n', '<leader>fh', require('telescope.builtin').help_tags, {})
-map('n', '<leader>fs', require('telescope.builtin').current_buffer_fuzzy_find, {})
-map('n', '<leader>fo', require('telescope.builtin').lsp_document_symbols, {})
+-- map('n', '<leader>ff', require('telescope.builtin').find_files, {})
+-- map('n', '<leader>fg', require('telescope.builtin').live_grep, {})
+-- map('n', '<leader>fb', require('telescope.builtin').buffers, {})
+-- map('n', '<leader>fh', require('telescope.builtin').help_tags, {})
+-- map('n', '<leader>fs', require('telescope.builtin').current_buffer_fuzzy_find, {})
+-- map('n', '<leader>fo', require('telescope.builtin').lsp_document_symbols, {})
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 --
 -- DAP
