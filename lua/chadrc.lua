@@ -5,23 +5,23 @@
 local M = {}
 
 M.ui = {
-  theme = "onedark",
+  theme = "mateo",
   -- cmp = {
   --  style = "atom",
   --},
 
-  -- statusline = {
-  --  theme = "minimal",
-  --  separator_style = "block",
-  --},
+  statusline = {
+    theme = "vscode_colored",
+    separator_style = "block",
+  },
 
-  -- tabufline = {
-  --  lazyload = false,
-  --},
+   tabufline = {
+    lazyload = false,
+  },
 
   -- cheatsheet = { theme = "simple" },
 
-  -- M.plugins == "custom.plugins",
+  M.plugins == "custom.plugins",
 
   hl_override = {
     Comment = { italic = true },
